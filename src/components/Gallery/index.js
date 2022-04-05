@@ -8,7 +8,7 @@ function Gallery(props) {
         description: 'Photos of grocery stores, food trucks, and other commercial projects',
     };
     return (
-        <wsection>
+        <section>
             <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
             <p>{currentCategory.description}</p>
             <div className='flex-row'>
