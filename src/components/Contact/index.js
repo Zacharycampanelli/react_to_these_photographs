@@ -17,16 +17,16 @@ function ContactForm() {
         setErrorMessage('');
       }
     } else {
-      if(!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required`)
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} is required`);
       } else {
-        setErrorMessage('')
+        setErrorMessage('');
       }
     }
-    if(!errorMessage) {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-
-  }}
+    if (!errorMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -51,10 +51,12 @@ function ContactForm() {
         </div>
         {errorMessage && (
           <div>
-            <p className='error-text'>{errorMessage}</p>
+            <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button data-testid="button" type="submit">
+          Submit
+        </button>
       </form>
     </section>
   );
